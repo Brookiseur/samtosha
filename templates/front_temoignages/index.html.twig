@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Temoignages{% endblock %}
+{% block stylesheets %}<link rel="stylesheet" href="{{ asset('css/styles-front-temoignages.min.css') }}">{% endblock %}
+
+{% block main %}
+<div class ="pageTemoignage">
+    
+    
+    <div class="form">
+    {% if is_granted('ROLE_USER') %}
+    {{ form_start(form)}}
+        <div class="monTemoignage">
+            <div class="zone gauche">
+            {{ form_label(form.monTemoignage) }} :
+            </div>
+            <div class="zone centre">
+                {{ form_widget(form.monTemoignage) }}
+                {{ form_errors(form.monTemoignage) }}
+                {{ form_help(form.monTemoignage) }}
+            </div>
+            <div class="zone droite">
+                {{ form_row(form.save)}}
+            </div>
+        </div>
+    {{ form_end(form)}}
+    {% endif %}
+    <div>
+</div>
+
+
+<div class="toutLesTemoignages">
+    <h1>Les témoignages !</h1>
+{% if temoignages is not empty %}
+{% for temoignage in temoignages %}
+    <div class="temoignage">
+        <h3>{{temoignage.user.firstname}} : </h3>{{temoignage.monTemoignage}}
+    </div>
+{% endfor %}
+{% else %}
+    <div class="temoignage">
+        Si vous avez participé à mon cours soyez le premier à laisser un témoignage. Pour cela inscrivez vous dans un premier temps sur le site ! 
+    </div>
+
+</div>
+
+
+{% endif %}
+
+{% endblock %}

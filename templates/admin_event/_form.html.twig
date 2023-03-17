@@ -1,0 +1,61 @@
+ <table class="table">
+    {{ form_start(form) }}
+    <thead>
+        <tr>
+            <th>{{ form_label(form.title) }}</th>
+            <th>
+                {{ form_label(form.startEvent) }}
+                {{ form_label(form.endEvent) }}
+            </th>
+            <th>{{ form_label(form.price) }}</th>
+            <th>{{ form_label(form.location) }}</th>
+            <th>{{ form_label(form.description) }}</th>
+            <th>{{ form_label(form.afficher) }}</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                {{ form_widget(form.title) }}
+                {{ form_errors(form.title) }}
+                {{ form_help(form.title) }}
+            </td>
+            <td>
+                {{ form_widget(form.startEvent) }}
+                {{ form_errors(form.startEvent) }}
+                {{ form_help(form.startEvent) }}
+                {{ form_widget(form.endEvent) }}
+                {{ form_errors(form.endEvent) }}
+                {{ form_help(form.endEvent) }}
+            </td>
+            <td>
+                {{ form_widget(form.price) }}
+                {{ form_errors(form.price) }}
+                {{ form_help(form.price) }}
+            </td>
+            <td>
+                {{ form_widget(form.location) }}
+                {{ form_errors(form.location) }}
+                {{ form_help(form.location) }}
+            </td>
+            <td>
+                {{ form_widget(form.description) }}
+                {{ form_errors(form.description) }}
+                {{ form_help(form.description) }}
+            </td>
+            <td>
+                {{ form_widget(form.afficher) }}
+                {{ form_errors(form.afficher) }}
+                {{ form_help(form.afficher) }}
+            </td>
+            <td>
+                <div class="btn">
+                {{ form_row(form.save)}}
+                </div>
+            </td>
+        </tr>
+    </tbody>
+    {{ form_rest(form) }}
+    {{ form_end(form) }}
+</table>

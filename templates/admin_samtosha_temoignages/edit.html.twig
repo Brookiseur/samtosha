@@ -1,0 +1,20 @@
+{% extends 'base_admin.html.twig' %}
+
+{% block title %}Edit Temoignages{% endblock %}
+
+{% block main %}
+<div class="form">
+    <h1>Validation du Temoignage</h1>
+
+    {{ include('admin_samtosha_temoignages/_form.html.twig') }}
+
+    <div class="backdelete">
+        <div class="back">
+            <a href="{{ path('admin_samtosha_temoignages') }}">Retour à la liste</a>
+        </div>
+        <div class="delete">
+            {{ include('admin_samtosha_temoignages/_delete_form.html.twig') }}
+        </div>
+    </div>
+</div>
+{% endblock %}

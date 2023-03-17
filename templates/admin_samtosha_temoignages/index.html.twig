@@ -1,0 +1,33 @@
+{% extends 'base_admin.html.twig' %}
+
+{% block title %}Temoignages index{% endblock %}
+
+{% block main %}
+<div class="form">
+<h1>Temoignages</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Temoignage</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {# {{dump(temoignages)}} #}
+        {% for temoignage in temoignages %}
+            <tr>
+                <td>{{ temoignage.monTemoignage }}</td>
+                <td>
+                    <a href="{{ path('admin_samtosha_temoignages_edit', {'id': temoignage.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">Aucun témoignage à valider</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

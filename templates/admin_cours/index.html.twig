@@ -1,0 +1,39 @@
+{% extends 'base_admin.html.twig' %}
+
+{% block title %}Cours{% endblock %}
+
+{% block main %}
+<div class="form">
+    <h1>Cours</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Type</th>
+                <th>Tarif</th>
+                <th>Description</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for cour in cours %}
+            <tr>
+                <td>{{ cour.type }}</td>
+                <td>{{ cour.tarif }}</td>
+                <td>{{ cour.description }}</td>
+                <td>
+                    <a  class= "btn" href="{{ path('admin_cours_edit', {'id': cour.id}) }}">Modifier</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="12">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <div class="create">
+        <a class="btn" href="{{ path('admin_cours_new') }}">Ajouter un cours</a>
+    </div>
+</div>
+{% endblock %}

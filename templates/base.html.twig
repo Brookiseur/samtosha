@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            {% block title %}
+                Welcome!
+            {% endblock %}
+        </title>
+        <link rel="stylesheet" href="{{ asset('css/styles-front-nav-footer.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/styles.min.css') }}">
+        {% block stylesheets %}{% endblock %}
+    </head>
+
+    <body>
+        <nav>
+        {{ render(controller(
+            'App\\Controller\\FrontNavController::frontNav',
+            ))}}
+        </nav>
+        <main>
+        {% block main %}
+        {% endblock %}
+    
+
+        </main>
+        <footer>
+            {{ render(controller(
+            'App\\Controller\\FrontFooterController::frontFooter',
+            ))}}
+        </footer>
+        {% block javascripts %}{% endblock %}
+
+    
+    </body>
+</html>

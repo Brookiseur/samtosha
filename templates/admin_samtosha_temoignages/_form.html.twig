@@ -1,0 +1,32 @@
+<table class="table">
+{{ form_start(form) }}
+    <thead>
+        {{dump(form)}}
+        <tr>
+            <th>{{ form_label(form.monTemoignage) }}</th>
+            <th>{{ form_label(form.isValid) }}</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td> 
+                {{ form_widget(form.monTemoignage) }}
+                {{ form_errors(form.monTemoignage) }}
+                {{ form_help(form.monTemoignage) }}
+            </td>
+            <td> 
+                {{ form_widget(form.isValid) }}
+                {{ form_errors(form.isValid) }}
+                {{ form_help(form.isValid) }}
+            </td>
+            <td>
+                <div class="btn">
+                {{ form_row(form.save)}}
+                </div>
+            </td>
+        </tr>
+    </tbody>
+    {{ form_rest(form) }}
+    {{ form_end(form) }}
+</table>

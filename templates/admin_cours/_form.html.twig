@@ -1,0 +1,46 @@
+<div class="form">
+<table class="table">
+{{ form_start(form) }}
+    <thead>
+        <tr>
+            <th>{{ form_label(form.type) }}</th>
+            <th>{{ form_label(form.tarif) }}</th>
+            <th>{{ form_label(form.description)}}</th>
+            <th>{{ form_label(form.presentation)}}</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td> 
+                {{ form_widget(form.type) }}
+                {{ form_errors(form.type) }}
+                {{ form_help(form.type) }}
+            </td>
+            <td>
+                {{ form_widget(form.tarif) }}
+                {{ form_errors(form.tarif) }}
+                {{ form_help(form.tarif) }}
+            </td>
+            <td class="description">
+                {{ form_widget(form.description)}}
+                {{ form_errors(form.description)}}
+                {{ form_help(form.description)}}
+                
+            </td>
+            <td>
+                {{ form_widget(form.presentation) }}
+                {{ form_errors(form.presentation) }}
+                {{ form_help(form.presentation) }}
+            </td>
+            <td>
+                <div class="btn">
+                {{ form_row(form.save)}}
+                </div>
+            </td>
+        </tr>
+    </tbody>
+    {{ form_rest(form) }}
+    {{ form_end(form) }}
+</table>
+</div>

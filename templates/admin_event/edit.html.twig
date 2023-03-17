@@ -1,0 +1,18 @@
+{% extends 'base_admin.html.twig' %}
+
+{% block title %}Edit Event{% endblock %}
+
+{% block main %}
+<div class="form">
+    <h1>Modification de l'évèvenement</h1>
+
+    {{ include('admin_event/_form.html.twig') }}
+    <div class="backdelete">
+        <div class="back">
+            <a class="btn" href="{{ path('admin_event_index') }}">Revenir à la liste</a>
+        </div>
+        <div class="delete">
+            {{ include('admin_event/_delete_form.html.twig') }}
+        </div>
+    </div>
+{% endblock %}

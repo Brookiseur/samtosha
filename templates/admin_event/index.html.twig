@@ -1,0 +1,43 @@
+{% extends 'base_admin.html.twig' %}
+
+{% block title %}Event index{% endblock %}
+
+{% block main %}
+<div class="form">
+    <h1>Evènements</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>StartEvent</th>
+                <th>EndEvent</th>
+                <th>Description</th>
+                <th>Afficher</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for event in events %}
+            <tr>
+                <td>{{ event.title }}</td>
+                <td>{{ event.startEvent ? event.startEvent|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ event.endEvent ? event.endEvent|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ event.description }}</td>
+                <td>{{ event.afficher ? 'Yes' : 'No' }}</td>
+                <td>
+                    <a href="{{ path('admin_event_edit', {'id': event.id}) }}">Modifier</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="10">Pas d'évenements</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <div class="create">
+        <a href="{{ path('admin_event_new') }}">Créer un évenement</a>
+    </div>
+</div>
+{% endblock %}
