@@ -20,15 +20,6 @@ class SubmenusFixtures extends Fixture
         $manager->persist($submenus);
 
         $submenus = new Submenus();
-        $submenus->setTitle('Blog');
-        $submenus->setHref('blog');
-        $submenus->setChild('samtosha');
-        $submenus->setForUser(true);
-        $submenus->setForAdmin(true);
-        $submenus->setForAdminBoard(true);
-        $manager->persist($submenus);
-
-        $submenus = new Submenus();
         $submenus->setTitle('Témoignages');
         $submenus->setHref('temoignages');
         $submenus->setChild('samtosha');
@@ -38,17 +29,8 @@ class SubmenusFixtures extends Fixture
         $manager->persist($submenus);
 
         $submenus = new Submenus();
-        $submenus->setTitle('Qui suis-je ?');
-        $submenus->setHref('qui-suis-je');
-        $submenus->setChild('samtosha');
-        $submenus->setForUser(true);
-        $submenus->setForAdmin(true);
-        $submenus->setForAdminBoard(true);
-        $manager->persist($submenus);
-
-        $submenus = new Submenus();
-        $submenus->setTitle('Pourquoi le yoga ?');
-        $submenus->setHref('pourquoi-le-yoga');
+        $submenus->setTitle('Présentation');
+        $submenus->setHref('presentation');
         $submenus->setChild('samtosha');
         $submenus->setForUser(true);
         $submenus->setForAdmin(true);
@@ -73,27 +55,10 @@ class SubmenusFixtures extends Fixture
         $submenus->setForAdminBoard(true);
         $manager->persist($submenus);
 
-        $submenus = new Submenus();
-        $submenus->setTitle('En ligne');
-        $submenus->setHref('en-ligne');
-        $submenus->setChild('cours');
-        $submenus->setForUser(true);
-        $submenus->setForAdmin(true);
-        $submenus->setForAdminBoard(true);
-        $manager->persist($submenus);
 
         $submenus = new Submenus();
-        $submenus->setTitle('Atelier');
-        $submenus->setHref('atelier');
-        $submenus->setChild('cours');
-        $submenus->setForUser(true);
-        $submenus->setForAdmin(true);
-        $submenus->setForAdminBoard(true);
-        $manager->persist($submenus);
-
-        $submenus = new Submenus();
-        $submenus->setTitle('Retraite');
-        $submenus->setHref('retraite');
+        $submenus->setTitle('Evènement');
+        $submenus->setHref('evenement');
         $submenus->setChild('cours');
         $submenus->setForUser(true);
         $submenus->setForAdmin(true);

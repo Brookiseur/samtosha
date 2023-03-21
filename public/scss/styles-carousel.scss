@@ -1,7 +1,7 @@
 
 
 // Carousel configuration parameters
-$n: 5;
+$n: 3;
 $item-width: 800px;
 $item-separation: 200px;
 $viewer-distance: 500px;
@@ -56,6 +56,7 @@ $apothem: 600px;
 	}
 	
 	.navigation {
+		padding-top: 90px;
 		display: flex;
 		justify-content: center;
 		margin: 20px 0 0;

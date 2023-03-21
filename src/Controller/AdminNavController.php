@@ -13,6 +13,7 @@ class AdminNavController extends AbstractController
     public function adminNav(MenuRepository $menuRepository, SubmenusRepository $submenusRepository) : Response
     {
         $roleUser=null;
+
         
         $menu = $menuRepository->findAll();
         $submenus = $submenusRepository->findAll();

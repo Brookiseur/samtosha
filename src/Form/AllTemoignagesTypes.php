@@ -10,7 +10,7 @@ use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 
-class AllTemoignagesType extends AbstractType
+class AllTemoignagesTypes extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {

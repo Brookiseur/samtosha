@@ -14,7 +14,8 @@ button{
 }
 
 main{
-    margin:90px 0 90px 0;
+    margin: 90px 0 0 0;
+    min-height: 100%;
     .widthscreen{
         width: 100vw;
         height: 80vh;

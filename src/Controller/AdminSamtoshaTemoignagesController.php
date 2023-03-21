@@ -3,7 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Temoignages;
-use App\Form\AllTemoignagesType;
+use App\Form\AllTemoignagesTypes;
 use App\Repository\TemoignagesRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -25,7 +25,7 @@ class AdminSamtoshaTemoignagesController extends AbstractController
     public function new(Request $request, TemoignagesRepository $temoignagesRepository): Response
     {
         $monTemoignage = new Temoignages();
-        $form = $this->createForm(AllTemoignagesType::class, $monTemoignage);
+        $form = $this->createForm(AllTemoignagesTypes::class, $monTemoignage);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
@@ -50,7 +50,7 @@ class AdminSamtoshaTemoignagesController extends AbstractController
     #[Route('/{id}/edit', name: 'admin_samtosha_temoignages_edit', methods: ['GET', 'POST'])]
     public function edit(Request $request, Temoignages $monTemoignage, TemoignagesRepository $temoignagesRepository): Response
     {
-        $form = $this->createForm(AllTemoignagesType::class, $monTemoignage);
+        $form = $this->createForm(AllTemoignagesTypes::class, $monTemoignage);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {

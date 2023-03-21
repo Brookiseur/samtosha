@@ -27,25 +27,11 @@ class CoursFixtures extends Fixture
 
         $cours = new Cours();
         $cours->setPresentation(true);
-        $cours->setType('en-ligne');
+        $cours->setType('Evènement');
         $cours->setDescription('Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae reprehenderit, expedita repudiandae ducimus ut quisquam placeat. Sed, quam? Alias voluptatibus facilis cumque placeat velit reprehenderit qui eveniet sequi, illum debitis.');
-        $cours->setTarif('16€');
+        $cours->setTarif('de 50 à 100€');
         $manager->persist($cours);
 
-        $cours = new Cours();
-        $cours->setPresentation(true);
-        $cours->setType('atelier');
-        $cours->setDescription('Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae reprehenderit, expedita repudiandae ducimus ut quisquam placeat. Sed, quam? Alias voluptatibus facilis cumque placeat velit reprehenderit qui eveniet sequi, illum debitis.');
-        $cours->setTarif('16€');
-        $manager->persist($cours);
-
-        $cours = new Cours();
-        $cours->setPresentation(true);
-        $cours->setType('retraite');
-        $cours->setDescription('Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae reprehenderit, expedita repudiandae ducimus ut quisquam placeat. Sed, quam? Alias voluptatibus facilis cumque placeat velit reprehenderit qui eveniet sequi, illum debitis.');
-        $cours->setTarif('16€');
-        $manager->persist($cours);
-        
         $manager->flush();
     }
 }
