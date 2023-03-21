@@ -8,9 +8,7 @@
 
 {% block main %}
 
-<div class="widthscreen">
-
-    <div class="centerscreen">
+<div class="logScreen">
 
     {% for flash_error in app.flashes('verify_email_error') %}
         <div class="" role="alert">{{ flash_error }}</div>
@@ -50,6 +48,6 @@
                 <button type="submit">Je valide </button>
             </div>
         </div>
-    </div>
+
 </div>
 {% endblock %}

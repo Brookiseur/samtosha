@@ -5,13 +5,9 @@
             <th>{{ form_label(form.title) }}</th>
             <th>
                 {{ form_label(form.startEvent) }}
-                {{ form_label(form.endEvent) }}
             </th>
             <th>{{ form_label(form.price) }}</th>
             <th>{{ form_label(form.location) }}</th>
-            <th>{{ form_label(form.description) }}</th>
-            <th>{{ form_label(form.afficher) }}</th>
-            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -39,6 +35,54 @@
                 {{ form_errors(form.location) }}
                 {{ form_help(form.location) }}
             </td>
+        </tr>
+    </tbody>
+</table>
+<table class="table">
+    <thead>
+        <tr>
+            <th>{{ form_label(form.imageFile) }}</th>
+            <th>
+                {{ form_label(form.isActualite) }}
+            </th>
+            <th>{{ form_label(form.participantMin) }}</th>
+            <th>{{ form_label(form.participantMax) }}</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                {{ form_widget(form.imageFile) }}
+                {{ form_errors(form.imageFile) }}
+                {{ form_help(form.imageFile) }}
+            </td>
+            <td>
+                {{ form_widget(form.isActualite) }}
+                {{ form_errors(form.isActualite) }}
+                {{ form_help(form.isActualite) }}
+            </td>
+            <td>
+                {{ form_widget(form.participantMin) }}
+                {{ form_errors(form.participantMin) }}
+                {{ form_help(form.participantMin) }}
+            </td>
+            <td>
+                {{ form_widget(form.participantMax) }}
+                {{ form_errors(form.participantMax) }}
+                {{ form_help(form.participantMax) }}
+            </td>
+        </tr>
+    </tbody>
+</table>
+<table class="table">
+    <thead>
+        <tr>
+            <th>{{ form_label(form.description) }}</th>
+            <th>{{ form_label(form.afficher) }}</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
             <td>
                 {{ form_widget(form.description) }}
                 {{ form_errors(form.description) }}
@@ -49,13 +93,16 @@
                 {{ form_errors(form.afficher) }}
                 {{ form_help(form.afficher) }}
             </td>
-            <td>
-                <div class="btn">
-                {{ form_row(form.save)}}
-                </div>
-            </td>
         </tr>
     </tbody>
+</table>
+<div class="flex">
+    <div class="btn">
+        <a href="{{ path('admin_event') }}">Revenir</a>
+    </div>
+    <div class="btn">
+    {{ form_row(form.save)}}
+    </div>  
+</div>
     {{ form_rest(form) }}
     {{ form_end(form) }}
-</table>

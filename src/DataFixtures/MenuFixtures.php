@@ -26,7 +26,7 @@ class MenuFixtures extends Fixture
         $menu->setSlug('samtosha');
         $menu->setForVisitor(true);
         $menu->setForUser(true);
-        $menu->setForAdminBoard(true);
+        $menu->setForAdminBoard(false);
         $manager->persist($menu);
 
         $menu = new Menu();
@@ -51,11 +51,11 @@ class MenuFixtures extends Fixture
         $menu = new Menu();
         $menu->setTitle('Planning');
         $menu->setHref('planning');
-        $menu->setAdminHref('admin_planning');
+        $menu->setAdminHref('');
         $menu->setSlug('planning');
         $menu->setForVisitor(true);
         $menu->setForUser(true);
-        $menu->setForAdminBoard(true);
+        $menu->setForAdminBoard(false);
         $manager->persist($menu);
 
         $menu = new Menu();
@@ -87,6 +87,16 @@ class MenuFixtures extends Fixture
         $menu->setForVisitor(false);
         $menu->setForUser(true);
         $menu->setForAdminBoard(false);
+        $manager->persist($menu);
+
+        $menu = new Menu();
+        $menu->setTitle('Evènements');
+        $menu->setImageName('');
+        $menu->setAdminHref('event');
+        $menu->setAdminHref('admin_event');
+        $menu->setForVisitor(false);
+        $menu->setForUser(false);
+        $menu->setForAdminBoard(true);
         $manager->persist($menu);
 
         $menu = new Menu();

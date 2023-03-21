@@ -13,7 +13,7 @@ use Symfony\Component\Routing\Annotation\Route;
 #[Route('/admin/event')]
 class AdminEventController extends AbstractController
 {
-    #[Route('/', name: 'admin_event_index', methods: ['GET'])]
+    #[Route('/', name: 'admin_event', methods: ['GET'])]
     public function index(EventRepository $eventRepository): Response
     {
         return $this->render('admin_event/index.html.twig', [
@@ -31,7 +31,7 @@ class AdminEventController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $eventRepository->save($event, true);
 
-            return $this->redirectToRoute('admin_event_index', [], Response::HTTP_SEE_OTHER);
+            return $this->redirectToRoute('admin_event', [], Response::HTTP_SEE_OTHER);
         }
 
         return $this->renderForm('admin_event/new.html.twig', [
@@ -57,7 +57,7 @@ class AdminEventController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $eventRepository->save($event, true);
 
-            return $this->redirectToRoute('admin_event_index', [], Response::HTTP_SEE_OTHER);
+            return $this->redirectToRoute('admin_event', [], Response::HTTP_SEE_OTHER);
         }
 
         return $this->renderForm('admin_event/edit.html.twig', [
@@ -73,6 +73,6 @@ class AdminEventController extends AbstractController
             $eventRepository->remove($event, true);
         }
 
-        return $this->redirectToRoute('admin_event_index', [], Response::HTTP_SEE_OTHER);
+        return $this->redirectToRoute('admin_event', [], Response::HTTP_SEE_OTHER);
     }
 }
