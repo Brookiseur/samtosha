@@ -1,0 +1,108 @@
+.imageAccueil{
+    position: relative;
+    .proverbe{
+        position: absolute;
+        bottom:250px;
+        right:150px;
+        color: white;
+        font-size: 1.5rem;
+    }
+    img{
+        width: 100%;
+    }
+}
+.coursAccueil{
+    text-align: center;
+    margin: 0 10%;
+    display:flex;
+    justify-content: space-around;
+    .collectif{
+        .imageCollectif{
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            width: 170px;
+            height: 265px;
+            border-radius: 50%;
+            transform: matrix(0.96, 0.29, 0.32, -0.95, 0, 0);
+            overflow: hidden;
+        }
+        img {
+            position: absolute;
+            top: 0px;
+            left: -50px;
+            transform: matrix(0.96, 0.29, 0.32, -0.95, 0, 0);
+            }
+    }
+    .prive{
+    .imagePrive{
+        border: 1px solid rgba(0, 0, 0, 0.2);
+            width: 170px;
+            height: 265px;
+            border-radius: 50%;
+            transform: matrix(0.96, 0.29, 0.32, -0.95, 0, 0);
+            overflow: hidden;
+            img {
+                position: absolute;
+                top: -30px;
+                left: -150px;
+                transform: matrix(0.96, 0.29, 0.32, -0.95, 0, 0);
+            }
+        }
+    }    
+    .evenements{
+        .imageEvenements{
+            border: 1px solid rgba(0, 0, 0, 0.2);
+                width: 170px;
+                height: 265px;
+                border-radius: 50%;
+                transform: matrix(0.96, 0.29, 0.32, -0.95, 0, 0);
+                overflow: hidden;   
+            }
+            img {
+                position: absolute;
+                top: 0px;
+                left: -50px;
+                transform: matrix(0.96, 0.29, 0.32, -0.95, 0, 0);
+            }
+    }
+}
+.actualiteAccueil{
+    margin-top: 50px;
+    text-align: center;
+    .actualite1{
+        margin: 30px 10%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .actualite2{
+        margin: 30px 10%;
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+.temoignagesAccueil{
+    margin-top: 50px;
+    text-align: center;
+    .temoignages1{
+        margin:30px 10%;
+        display: flex;
+        justify-content: space-around;
+    }
+    .temoignages2{
+        margin:30px 10%;
+        display: flex;
+        justify-content: space-around;
+    }
+    .temoignages3{
+        margin:30px 10%;
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+.line {
+    margin: 40px auto;
+    width: 1400px;
+    border: 2px solid #581413;
+}
