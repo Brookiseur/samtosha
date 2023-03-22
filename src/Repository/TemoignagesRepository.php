@@ -63,4 +63,20 @@ class TemoignagesRepository extends ServiceEntityRepository
 //            ->getOneOrNullResult()
 //        ;
 //    }
+
+
+
+
+public function getLast6Temoignages()
+    {
+
+        return  $this->findBy(['monTemoignage' => true],['id' =>'DESC'], 6 );
+
+
+    }
+
+
+
 }
+
+

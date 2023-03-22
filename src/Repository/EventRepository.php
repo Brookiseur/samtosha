@@ -63,4 +63,16 @@ class EventRepository extends ServiceEntityRepository
 //            ->getOneOrNullResult()
 //        ;
 //    }
+
+
+    /**
+    * @return Event[] Returns an array of Event objects
+    */
+    public function getLast4EventActualite()
+    {
+
+        return  $this->findBy(['isActualite' => true],['id' =>'DESC'], 4 );
+
+
+    }
 }

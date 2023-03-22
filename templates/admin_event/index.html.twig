@@ -17,6 +17,7 @@
                 <th>Actualité ?</th>
                 <th>Participants Min. Max.</th>
                 <th>Description</th>
+                <th>Type du cours</th>
                 <th>Planning ?</th>
                 <th></th>
             </tr>
@@ -35,6 +36,7 @@
                 <td>{{ event.isActualite ? 'Yes' : 'No'  }}</td>
                 <td>{{ event.participantMin}} - {{ event.participantMax}}</td>
                 <td>{{ event.description }}</td>
+                <td>{{ event.typeOfCourse }}</td>
                 <td>{{ event.afficher ? 'Yes' : 'No' }}</td>
                 <td>
                     <a  class="btn" href="{{ path('admin_event_edit', {'id': event.id}) }}">Modifier</a>

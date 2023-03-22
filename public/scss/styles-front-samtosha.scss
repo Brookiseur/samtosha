@@ -65,19 +65,46 @@
             }
     }
 }
-.actualiteAccueil{
-    margin-top: 50px;
-    text-align: center;
-    .actualite1{
-        margin: 30px 10%;
-        display: flex;
-        justify-content: space-around;
-    }
 
-    .actualite2{
-        margin: 30px 10%;
+.actualiteAccueil{
+    text-align: center;
+    .actuContainer{
         display: flex;
-        justify-content: space-around;
+        flex-wrap: wrap;
+        margin: 0 10%;
+        .actuCard{
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            width: calc(50% - 5px);
+            -webkit-transition: all 0.2s;
+            -moz-transition: all 0.2s;
+            -ms-transition: all 0.2s;
+            -o-transition: all 0.2s;
+            transition: all 0.2s;
+            .imageCard{
+                height: 100%;
+                padding-left: 40px;
+                .actuImage{
+                    height: 100%;
+                    width: 200px;
+                    margin:auto;
+                }
+            }
+            .infoCard{
+                padding-left: 20px;
+                font-size: 1.5rem;
+                margin:auto;
+                text-align: center;
+            }
+        }
+        .actuCard:nth-child(2n){
+            margin-right: 0;
+        }
+        .actuCard:hover {
+            border : 2px solid #000000;
+            box-shadow:8px 8px 10px 0 rgba(0,0,0,0.5);
+        }
     }
 }
 

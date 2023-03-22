@@ -78,6 +78,7 @@
     <thead>
         <tr>
             <th>{{ form_label(form.description) }}</th>
+            <th>{{ form_label(form.typeOfCourse) }}</th>
             <th>{{ form_label(form.afficher) }}</th>
         </tr>
     </thead>
@@ -87,6 +88,11 @@
                 {{ form_widget(form.description) }}
                 {{ form_errors(form.description) }}
                 {{ form_help(form.description) }}
+            </td>
+            <td>
+                {{ form_widget(form.typeOfCourse) }}
+                {{ form_errors(form.typeOfCourse) }}
+                {{ form_help(form.typeOfCourse) }}
             </td>
             <td>
                 {{ form_widget(form.afficher) }}

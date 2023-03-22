@@ -34,16 +34,45 @@
     <div class="line"></div>
     <div class="actualiteAccueil">
         <h1>Actualités</h1>
-        <div class="actualite1">
-            <div class="actu1">actu1</div>
-            <div class="actu2">actu2</div>
-        </div>
-        <div class="actualite2">
-            <div class="actu3">actu3</div>
-            <div class="actu4">actu4</div>
+        <div class="actuContainer">
+            {% for i, actu in last4Actu %}
+            <div class="actuCard">
+                {% if actu.imageName is not null %}
+                <div class="imageCard">
+                    <img src="{{ asset('images/evenements/' ~ actu.imageName)}}" alt='{{actu.title}}' class='actuImage'>
+                </div>
+                <div class="infoCard">
+                    <h4>{{actu.title}}</h4>
+                    <p>{{actu.description}}</p>
+                    {% if actu.startEvent|date('d') == actu.endEvent|date('d')%}
+                    <p>Rendez vous le {{ actu.startEvent|date('d/m/Y')}} de {{actu.startEvent|date('H:i')}} à {{actu.endEvent|date('H:i')}}</p>
+                    {% else %}
+                    <p>Rendez vous du {{ actu.startEvent|date('d/m/Y')}} à {{actu.startEvent|date('H:i')}} au {{ actu.endEvent|date('d/m/Y')}} à {{actu.endEvent|date('H:i')}}</p>
+                    {% endif %}
+                    à
+                    {% if actu.location is not null %}
+                    <p> {{actu.location }} </p>
+                    {% endif %}
+                </div>
+                {% endif %}
+            </div>
+            {% endfor %}
         </div>
     </div>
     <div class="line"></div>
+    <div class="temoignageAccueil">
+<h1>Témoignages</h1>
+<div class="actuContainer">
+    {% for i, actu in last4Actu %}
+    <div class="actuCard">
+        <div class="infoCard">
+            <h4>{{actu.title}}</h4>
+            <p>{{actu.description}}</p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+</div>
     <div class="temoignagesAccueil">
         <h1>Témoignages</h1>
         <div class="temoignages1">

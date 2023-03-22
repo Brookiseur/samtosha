@@ -57,6 +57,9 @@ class Event
     #[ORM\Column(nullable: true)]
     private ?\DateTimeImmutable $updatedAt = null;
 
+    #[ORM\Column(length: 50, nullable: true)]
+    private ?string $typeOfCourse = null;
+
 
     public function getId(): ?int
     {
@@ -228,6 +231,18 @@ class Event
     public function setUpdatedAt(?\DateTimeImmutable $updatedAt): self
     {
         $this->updatedAt = $updatedAt;
+
+        return $this;
+    }
+
+    public function getTypeOfCourse(): ?string
+    {
+        return $this->typeOfCourse;
+    }
+
+    public function setTypeOfCourse(?string $typeOfCourse): self
+    {
+        $this->typeOfCourse = $typeOfCourse;
 
         return $this;
     }

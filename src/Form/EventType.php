@@ -8,6 +8,7 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
@@ -36,6 +37,13 @@ class EventType extends AbstractType
                 "attr"=>["class"=>"inputfield"], "label_attr"=>["class"=>"labelform"],
             ])
             ->add('description', TextareaType::class, ["attr"=>["class"=>"areafield"], "label_attr"=>["class"=>"labelform"], "required"=>false])
+            ->add('typeOfCourse', ChoiceType::class, ["label"=>"Type du cours ?","attr"=>["class"=>"littlefield"], "label_attr"=>["class"=>"labelform"], "required"=>false,
+            "choices"=>[
+                'Collectif' => 'collectif',
+                'Privé' => 'prive',
+                'Evènement' => 'evenement',
+                'Aucun' => null, 
+            ]])
             ->add('afficher',CheckboxType::class, ["label"=>"Dans le planning ?", "attr"=> ["class" => "btn"],"required"=>false])
             ->add('location', TextType::class, ["label"=>"Lieu","attr"=>["class"=>"littlefield"], "label_attr"=>["class"=>"labelform"]])
             ->add('price', TextType::class, ["label"=>"Prix","attr"=>["class"=>"littlefield"], "label_attr"=>["class"=>"labelform"]])
