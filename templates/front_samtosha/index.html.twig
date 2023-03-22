@@ -43,7 +43,6 @@
                 </div>
                 <div class="infoCard">
                     <h4>{{actu.title}}</h4>
-                    <p>{{actu.description}}</p>
                     {% if actu.startEvent|date('d') == actu.endEvent|date('d')%}
                     <p>Rendez vous le {{ actu.startEvent|date('d/m/Y')}} de {{actu.startEvent|date('H:i')}} à {{actu.endEvent|date('H:i')}}</p>
                     {% else %}
