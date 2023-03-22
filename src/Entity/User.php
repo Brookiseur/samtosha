@@ -64,8 +64,8 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(length: 50, nullable: true)]
     private ?string $zipcode = null;
 
-    #[ORM\Column(nullable: true)]
-    private ?bool $isVerified = null;
+    #[ORM\Column(type: 'boolean')]
+    private ?bool $isVerified = false;
 
     #[ORM\OneToOne(mappedBy: 'user', cascade: ['persist'])]
     private ?Temoignages $monTemoignage = null;
