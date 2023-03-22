@@ -70,7 +70,7 @@ class TemoignagesRepository extends ServiceEntityRepository
 public function getLast6Temoignages()
     {
 
-        return  $this->findBy(['monTemoignage' => true],['id' =>'DESC'], 6 );
+        return  $this->findBy(['isValid' => true],['id' =>'DESC'], 6 );
 
 
     }

@@ -109,22 +109,26 @@
 }
 
 .temoignagesAccueil{
-    margin-top: 50px;
     text-align: center;
-    .temoignages1{
-        margin:30px 10%;
+    margin-bottom: 50px;
+    .temContainer{
         display: flex;
-        justify-content: space-around;
-    }
-    .temoignages2{
-        margin:30px 10%;
-        display: flex;
-        justify-content: space-around;
-    }
-    .temoignages3{
-        margin:30px 10%;
-        display: flex;
-        justify-content: space-around;
+        flex-wrap: wrap;
+        margin: 0 10%;
+        .temCard{
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            width: calc(50% - 5px);
+            .infoCard{
+                margin:auto;
+                text-align: center;
+                font-size: 1.5rem;
+            }
+        }
+        .temCard:nth-child(2n){
+            margin-right: 0;
+        }
     }
 }
 

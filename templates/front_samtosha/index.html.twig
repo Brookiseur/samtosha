@@ -60,32 +60,17 @@
         </div>
     </div>
     <div class="line"></div>
-    <div class="temoignageAccueil">
-<h1>Témoignages</h1>
-<div class="actuContainer">
-    {% for i, actu in last4Actu %}
-    <div class="actuCard">
-        <div class="infoCard">
-            <h4>{{actu.title}}</h4>
-            <p>{{actu.description}}</p>
-        </div>
-    </div>
-    {% endfor %}
-</div>
-</div>
     <div class="temoignagesAccueil">
         <h1>Témoignages</h1>
-        <div class="temoignages1">
-            <div class="tem1">tem1</div>
-            <div class="tem2">tem2</div>
-        </div>
-        <div class="temoignages2">
-            <div class="tem3">tem3</div>
-            <div class="tem4">tem4</div>
-        </div>
-        <div class="temoignages3">
-            <div class="tem5">tem5</div>
-            <div class="tem6">tem6</div>
+        <div class="temContainer">
+            {% for i, tem in last6Tem %}
+            <div class="temCard">
+                <div class="infoCard">
+                    <h4>{{tem.user.firstname}} :</h4>
+                    <p>{{tem.monTemoignage}}</p>
+                </div>
+            </div>
+            {% endfor %}
         </div>
     </div>
 </div>
