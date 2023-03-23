@@ -35,7 +35,7 @@
                 <td><img class="img-list" src="{{ asset('images/evenements/' ~ event.imageName) }}" alt="{{event.imageName}}"></td>
                 <td>{{ event.isActualite ? 'Yes' : 'No'  }}</td>
                 <td>{{ event.participantMin}} - {{ event.participantMax}}</td>
-                <td>{{ event.description }}</td>
+                <td><div class="description">{{ event.description }}</div></td>
                 <td>{{ event.typeOfCourse }}</td>
                 <td>{{ event.afficher ? 'Yes' : 'No' }}</td>
                 <td>
