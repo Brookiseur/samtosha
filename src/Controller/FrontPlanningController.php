@@ -19,9 +19,6 @@ class FrontPlanningController extends AbstractController
         } catch (\Exception $e) {
             $month = new Month();
         }
-        $month->__toString();
-
-        $days = ['Lundi','Mardi','Mercred','Jeudi','Vendredi','Samedi','Dimanche'];
 
         $events = $eventRepository->findAll();
         $eventsMonth = [];
@@ -47,7 +44,7 @@ class FrontPlanningController extends AbstractController
             'lastMonday' =>$month->getStartingDay()->modify('last monday'),
             'start'=>$month->getStartingDay()->format('N'),
             'startMonday'=>$month->getStartingDay(),
-            'days' => $days,
+            'days' => $month->days,
             'currentMonth' => date('m'),
             'previousMonth'=> $month->previousMonth()->month,
             'nextMonth'=> $month->nextMonth()->month,

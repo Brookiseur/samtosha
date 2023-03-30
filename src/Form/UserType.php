@@ -32,7 +32,7 @@ class UserType extends AbstractType
                 'invalid_message' => 'Si tu n\'ecris pas deux fois la même chose ca peux pas marcher !',
                 // 'options' => ['attr' => ['class' => 'password-field']],
                 'required' => false,
-                'first_options'  => ['label' => 'Mot de passe',"attr"=>["class"=>"inputfield"], "label_attr"=>["class"=>"labelform"],  "help_attr"=>["class"=>"helpform"], 'help'=>"Votre mot de passe doit avoir : - entre 8 et 20 caractères - une lettre majuscule et une minuscule - un chiffre - un caractère spéciale"],
+                'first_options'  => ['label' => 'Mot de passe',"attr"=>["class"=>"inputfield"], "label_attr"=>["class"=>"labelform"],  "help_attr"=>["class"=>"helpform"]],
                 'second_options' => ['label' => 'Confirmez le mot de passe', "label_attr"=>["class"=>"labelform"], "attr"=>["class"=>"inputfield"],],
                 //'mapped' => false
             ])

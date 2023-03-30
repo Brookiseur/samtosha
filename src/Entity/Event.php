@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\EventRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\File;
@@ -59,6 +61,8 @@ class Event
 
     #[ORM\Column(length: 50, nullable: true)]
     private ?string $typeOfCourse = null;
+
+
 
 
     public function getId(): ?int

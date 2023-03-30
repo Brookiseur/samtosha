@@ -32,11 +32,13 @@ class RegistrationFormType extends AbstractType
             ->add('plainPassword', PasswordType::class, [
                 // instead of being set onto the object directly,
                 // this is read and encoded in the controller
-                'mapped' => false,
+                // 'mapped' => false,
                 'attr' => ['autocomplete' => 'new-password', "class"=>"inputfield"],
                 'label'=>'Mot de passe',
                 "label_attr"=>["class"=>"labelform"],
-                'constraints' => [
+                "help_attr"=>["class"=>"helpform"],
+                'help'=>"Votre mot de passe doit avoir : - entre 8 et 20 caractères - une lettre majuscule et une minuscule - un chiffre - un caractère spéciale",
+                'constraints' =>[
                     new NotBlank([
                         'message' => 'Please enter a password',
                     ]),
@@ -49,6 +51,7 @@ class RegistrationFormType extends AbstractType
                 ],
             ])
         ;
+        
     }
 
     public function configureOptions(OptionsResolver $resolver): void

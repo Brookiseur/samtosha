@@ -66,7 +66,7 @@ nav{
             background-color: #B2A086;
             position: relative;
             height: 100%;
-            flex:1;
+            flex:1; // Pour que la largeur s'adapte equitablement entre les elements.
             > a {
                 color:#581413;
                 position: absolute;
@@ -76,28 +76,28 @@ nav{
                 width: 100%;
             }
         }
-    }
-    .sous-menu{
-        padding-left: 0;
-        margin-top: var(--hauteur-menu);
-        width: 100%;
-        overflow: hidden;
-        max-height: 0;
-        > li:hover {
-            background-color:#B2A086;
-            > a {
-                color:#581413;
-            }      
-        }
-        li {
-            background-color:#581413;
-            height: var(--hauteur-menu);
+        .sous-menu{
+            padding-left: 0;
+            margin-top: var(--hauteur-menu);
             width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            a{
-                color: #B2A086;
+            overflow: hidden;
+            max-height: 0;
+            > li:hover {
+                background-color:#B2A086;
+                > a {
+                    color:#581413;
+                }      
+            }
+            li {
+                background-color:#581413;
+                height: var(--hauteur-menu);
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                a{
+                    color: #B2A086;
+                }
             }
         }
     }

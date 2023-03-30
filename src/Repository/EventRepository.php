@@ -73,6 +73,5 @@ class EventRepository extends ServiceEntityRepository
 
         return  $this->findBy(['isActualite' => true],['id' =>'DESC'], 4 );
 
-
     }
 }

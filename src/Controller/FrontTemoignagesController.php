@@ -26,15 +26,15 @@ class FrontTemoignagesController extends AbstractController
         }else{
             $monTemoignage = ($this->getUser()->getMonTemoignage());  
         }
-            $form = $this->createForm(TemoignagesType::class, $monTemoignage);
-            $form->handleRequest($request);
-            if( $form->isSubmitted() && $form->isValid()){
-                $monTemoignage->setUser($this->getUser());
-                $monTemoignage->setUpdatedAt(new \DateTimeImmutable());
-                $monTemoignage->setIsValid(false);
-                $em->persist($monTemoignage);
-                $em->flush();
-                return $this->redirectToRoute('temoignages', [], Response::HTTP_SEE_OTHER);
+        $form = $this->createForm(TemoignagesType::class, $monTemoignage);
+        $form->handleRequest($request);
+        if( $form->isSubmitted() && $form->isValid()){
+            $monTemoignage->setUser($this->getUser());
+            $monTemoignage->setUpdatedAt(new \DateTimeImmutable());
+            $monTemoignage->setIsValid(false);
+            $em->persist($monTemoignage);
+            $em->flush();
+            return $this->redirectToRoute('temoignages', [], Response::HTTP_SEE_OTHER);
         }
     }
         

@@ -44,12 +44,12 @@
             {{ form_help(registrationForm.firstname) }}
             </div>
 
-            <div class="btn">
-                <button type="submit">Je valide </button>
+            <div class="form">
+                <button class="btn" type="submit">Je valide </button>
             </div>
-            {{ form_rest(registrationForm) }}
-            {{ form_end(registrationForm) }}
         </div>
-        
+        {{ form_rest(registrationForm) }}
+        {{ form_end(registrationForm) }}
 </div>
+
 {% endblock %}

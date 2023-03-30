@@ -1,7 +1,9 @@
-let openBtn = document.getElementById("nav-open");
-let closeBtn = document.getElementById("nav-close");
-let navWrapper = document.getElementById("nav-wrapper");
-let navLatteral = document.getElementById("nav-latteral");
+var 
+openBtn = document.getElementById("nav-open")
+closeBtn = document.getElementById("nav-close")
+navWrapper = document.getElementById("nav-wrapper")
+navLatteral = document.getElementById("nav-latteral")
+;
 
 const openNav = () => {
     navWrapper.classList.add("active");

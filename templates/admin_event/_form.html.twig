@@ -1,5 +1,6 @@
- <table class="table">
-    {{ form_start(form) }}
+<table class="table">
+{{ form_start(form) }}
+
     <thead>
         <tr>
             <th>{{ form_label(form.title) }}</th>
@@ -109,6 +110,6 @@
     <div class="btn">
     {{ form_row(form.save)}}
     </div>  
-</div>
     {{ form_rest(form) }}
     {{ form_end(form) }}
+</div>

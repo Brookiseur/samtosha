@@ -3,9 +3,6 @@
 namespace App\Entity;
 
 use App\Repository\UserRepository;
-use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
-use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
@@ -33,7 +30,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[Assert\Regex(
         pattern :  '/^(?=\S*[a-z])(?=\S*[A-Z])(?=\S*[0-9])(?=\S*[[:punct:]|§µ¤£¨])\S{8,}$/',
         match: true, 
-        message: 'Votre mot de passe doit avoir entre 8 et 20 caractères avec au moins une lettre majuscule, une minuscule, un chiffre et un caractère spéciale',
+        message: 'Votre mot de passe ne respecte pas les consignes !',
     )]
     private $plainPassword;
     

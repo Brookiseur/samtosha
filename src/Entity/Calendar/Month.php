@@ -13,6 +13,8 @@ class Month {
     private $months = ['Janvier','Février','Mars','Avril','Mais','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'];
     public $month;
     public $year;
+    public $days = ['Lundi','Mardi','Mercred','Jeudi','Vendredi','Samedi','Dimanche'];
+
     /**
      * Undocumented function
      *
@@ -58,9 +60,9 @@ class Month {
      */
     public function getWeeks (): int {
         $start = $this->getStartingDay();
-        $end = (clone $start)->modify('+1 month -1 day');
+        $end = (clone $start)->modify('+1 month -1 day'); // le clone permet de ne pas modifier la valeur start
         if( intval($end->format('W')) === 1){
-        $weeks =  intval(((clone $start)->modify('+1 month -1 week'))->format('W')) - intval($start->format('W')) + 1 ;
+        $weeks =  intval(((clone $start)->modify('+1 month -1 week'))->format('W')) - intval($start->format('W')) + 1 ; // + 1 pour avoir le nombre de semaine exacte sachant que la derniere semaine du mois à été enlevé 
         }
         else {
         $weeks =  intval($end->format('W')) - intval($start->format('W'))  ;
@@ -105,13 +107,5 @@ class Month {
         $month = str_pad($month, 2, "0", STR_PAD_LEFT);
         return new Month($month, $year);
     }
-/**
- * Est ce que le jour est dans le mois en cours
- *
- * @param DateTime $date
- * @return boolean
- */
-    public function withinMounth(DateTime $date): bool{
-        return $this->getStartingDay()->format('Y-m') == $date->format('Y-m');
-    }
+
 }
