@@ -35,6 +35,7 @@ body{
 
 nav{
     width: 100vw;
+    min-width: 550px;
     position: fixed;
     top: 0;
     z-index: 99;
@@ -109,10 +110,13 @@ nav{
     height: var(--hauteur-menu);
     width: 100vw;
     display: flex;
+    min-width: 550px;
     justify-content: space-around;
     align-items: center;
     bottom: 0;
     z-index: 99;
+    overflow: hidden;
+    margin-top: 20px;
     .left{
         width: 20vw;
         display: flex;

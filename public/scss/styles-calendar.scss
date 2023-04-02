@@ -39,6 +39,11 @@
 }
 
 .calendar__table5weeks td{
-    height: 16.66%;
-    max-height: width(14.29%);
+    height:16.66%;
+}
+
+@media screen and  (max-width: 550px) {
+    .calendar__table {
+        height: 100vw;
+    }
 }

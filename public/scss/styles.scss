@@ -5,6 +5,7 @@
 }
 body{
     color :#581413;
+    min-width: 550px;
     a{
         color :#581413;
     }
@@ -15,7 +16,9 @@ button{
 
 main{
     margin: 90px 0 0 0;
-    min-height: 100%;
+    width: 100vw;
+    min-height: calc(100% - 90px );
+    min-width: 550px;
     .btn:hover{
         background-color: #581413;
         color: #B2A086;
@@ -113,3 +116,4 @@ align-items: center;
 justify-content: center;
 height: 100vh;
 }
+
