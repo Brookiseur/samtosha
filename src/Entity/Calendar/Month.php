@@ -10,7 +10,7 @@ use Exception;
 
 class Month {
 
-    private $months = ['Janvier','Février','Mars','Avril','Mais','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'];
+    private $months = ['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'];
     public $month;
     public $year;
     public $days = ['Lundi','Mardi','Mercred','Jeudi','Vendredi','Samedi','Dimanche'];
